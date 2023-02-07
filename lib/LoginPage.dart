@@ -39,18 +39,28 @@ class LoginForms extends StatelessWidget {
             Expanded(child: Text("Password")),
             Expanded(child: TextField())
           ])),
-          Expanded(child: Text("Login button")),
           Expanded(
-            child: ElevatedButton.icon(
-              onPressed: () {},
-              icon: Icon(
-                // <-- Icon
-                Icons.download,
-                size: 24.0,
+              child: Row(children: <Widget>[
+            Expanded(
+                child: OutlinedButton(
+              style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
               ),
-              label: Text('Google Login'), // <-- Text
+              onPressed: () {},
+              child: Text('Login'),
+            )),
+            Expanded(
+              child: ElevatedButton.icon(
+                onPressed: () {},
+                icon: Icon(
+                  // <-- Icon
+                  Icons.download,
+                  size: 24.0,
+                ),
+                label: Text('Google Login'), // <-- Text
+              ),
             ),
-          ),
+          ])),
         ])));
   }
 }
